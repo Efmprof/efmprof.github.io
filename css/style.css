@@ -80,7 +80,7 @@ html {
 	transition: 0.2s;
 }
 
-.main-down:hover{
+.main-down:hover {
 	color: #fff;
 	border-color: #fff;
 }
@@ -214,6 +214,7 @@ html {
 	display: inline-block;
 	border: 1px #333 solid;
 	padding: 10px 20px;
+	margin-top: 20px;
 	color: #333;
 	border-radius: 5px;
 	-webkit-transition: 0.25s;
@@ -235,6 +236,15 @@ html {
 	.footer strong {
 		margin: 3rem 0 2rem;
 		display: inline-block;
+	}
+	.modal-btn {
+		display: block;
+		text-align: center;
+		margin: 40px auto 0px;
+		width: 230px;
+	}
+	.modal-body h4 {
+		text-align: center;
 	}
 }
 
