@@ -12,7 +12,7 @@
   <meta property="og:site_name" content="Портфолио верстальщика">
   <meta property="article:author" content="Артем Исламов">
   <title>Евгений Евсеев - Портфолио</title>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
+ \<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/fontello.css">
   <link rel="stylesheet" href="css/fontello-embedded.css">
@@ -37,7 +37,7 @@
       <a class='main-down' href="#portfolio"><i class='icon-down'></i></a>
     </div>
 
-    <div class="portfolio">
+    <div class="portfolio" id="portfolio">
       <div class="container">
 
         <h2 class='portfolio-title'>Портфолио</h2>
@@ -117,6 +117,27 @@
     <script src="js/common.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script>
+      $(function(){
+        $('.main-down').on('click', function(event) {
+        // отменяем стандартное действие
+        event.preventDefault();
+        
+        var sc = $(this).attr("href"),
+        dn = $(sc).offset().top;
+        /*
+        * sc - в переменную заносим информацию о том, к какому блоку надо перейти
+        * dn - определяем положение блока на странице
+        */
+        
+        $('html, body').animate({scrollTop: dn}, 800);
+        
+        /*
+        * 1000 скорость перехода в миллисекундах
+        */
+      });
+      });
+    </script>
     <script>
       $(function() {
         var link = $('a[data-toggle="modal"]');
